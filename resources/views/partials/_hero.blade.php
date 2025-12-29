@@ -1,21 +1,59 @@
-<section class="relative h-72 bg-laravel flex flex-col justify-center align-center text-center space-y-4 mb-4">
-    <div class="absolute top-0 left-0 w-full h-full opacity-10 bg-no-repeat bg-center"
-        style="background-image: url('images/laravel-logo.png')"></div>
+<section
+    class="flex flex-col items-center bg-[url('https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/hero/gradientBg.svg')] bg-cover text-gray-800 pb-16 text-sm">
+    <div class="flex flex-wrap items-center justify-center p-1.5 mt-32 rounded-full border border-indigo-100 text-xs">
+        <div class="flex items-center">
+            <img class="size-7 rounded-full border-3 border-white"
+                src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=50" alt="userImage1">
+            <img class="size-7 rounded-full border-3 border-white -translate-x-2"
+                src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=50" alt="userImage2">
+            <img class="size-7 rounded-full border-3 border-white -translate-x-4"
+                src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=50&h=50&auto=format&fit=crop"
+                alt="userImage3">
+        </div>
 
-    <div class="z-10">
-        <h1 class="text-6xl font-bold uppercase text-white">
-            Lara<span class="text-black">Gigs</span>
-        </h1>
-        <p class="text-2xl text-gray-200 font-bold my-4">
-            Find or post Laravel jobs & projects
-        </p>
-        <div>
-            @auth
-            @else
-                <a href="/register"
-                    class="inline-block border-2 border-white text-white py-2 px-4 rounded-xl uppercase mt-2 hover:text-black hover:border-black">Sign
-                    Up to List a Gig</a>
-            @endauth
+        <p class="-translate-x-2">Join community of 1m+ founders </p>
+    </div>
+
+    <h1
+        class="text-4xl md:text-6xl text-center font-medium max-w-3xl mt-5 bg-gradient-to-r from-black to-[#748298] text-transparent bg-clip-text">
+        Build. Launch. Scale. Without the complexity.
+    </h1>
+    <p class="text-slate-600 md:text-base max-md:px-2 text-center max-w-xl mt-3">
+        A high-performance, serverless Postgres database that helps you ship fast and scale without limits.
+    </p>
+
+    <div>
+        @auth
+        @else
+            <a href="/register"
+                class="inline-block border-2 border-white text-white py-2 px-4 rounded-xl uppercase mt-2 hover:text-black hover:border-black">Sign
+                Up to List a Gig</a>
+        @endauth
+    </div>
+
+    <button
+        class="flex items-center gap-2 bg-slate-800 hover:bg-slate-900 text-white px-8 py-3 mt-8 rounded-full transition">
+        <span>get started for free</span>
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4.166 10h11.667m0 0L9.999 4.167M15.833 10l-5.834 5.834" stroke="#fff" stroke-width="1.8"
+                stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+    </button>
+
+
+    <div class="overflow-hidden w-full relative max-w-5xl mx-auto select-none mt-16">
+        <div
+            class="absolute left-0 top-0 h-full w-20 z-10 pointer-events-none bg-gradient-to-r from-[#f5f7ff] to-transparent">
+        </div>
+
+        <div class="marquee-inner flex will-change-transform min-w-[200%]">
+            <div class="flex py-4" id="logo-container">
+            </div>
+        </div>
+
+        <div
+            class="absolute right-0 top-0 h-full w-20 md:w-40 z-10 pointer-events-none bg-gradient-to-l from-[#efe9f4] to-transparent">
         </div>
     </div>
+
 </section>

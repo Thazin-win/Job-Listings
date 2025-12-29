@@ -5,7 +5,7 @@
 
     @include('partials._search')
 
-    <div class="lg:grid lg:grid-cols-2 gap-4 space-y-4 md:space-y-0 mx-4">
+    <div class="lg:grid lg:grid-cols-2 gap-4 space-y-4 md:space-y-0 mx-4 px-16">
 
         @unless(count($listings) == 0)
 
@@ -19,7 +19,7 @@
 
     </div>
 
-    <div class="mt-6 p-4">
+    <div class="mt-6 py-4 px-16">
         {{$listings->links()}}
     </div>
 </x-layout>
