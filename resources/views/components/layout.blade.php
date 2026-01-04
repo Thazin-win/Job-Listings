@@ -16,7 +16,7 @@
             theme: {
                 extend: {
                     colors: {
-                        laravel: '#0a1172',
+                        laravel: '#01052d',
                     },
                 },
             },
@@ -46,12 +46,11 @@
     <title>LaraGigs | Find Laravel Jobs & Projects</title>
 </head>
 
-<body
-    class="mb-48 bg-[url('https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/hero/gradientBg.svg')] bg-cover text-gray-800">
+<body class="mb-0  text-gray-800 ">
     <!-- Updated Navigation -->
     <nav class="flex items-center justify-between p-4 border-b border-slate-200 md:px-16 lg:px-24 xl:px-32 w-full">
         <a href="/">
-            <img class="w-24" src="{{asset('images/logo.png')}}" alt="LaraGigs Logo" />
+            <img class="w-20" src="{{ asset("images/logo.jpg") }}" alt="LaraGigs Logo" />
         </a>
 
         <!-- Desktop Menu -->
@@ -62,7 +61,7 @@
                     Welcome {{auth()->user()->name}}
                 </span>
                 <a href="/listings/manage" class="hover:text-laravel">
-                    <i class="fa-solid fa-gear"></i> Manage Listings
+                    <i class="fa-solid fa-gear"></i> Manage Jobs
                 </a>
                 <form class="inline" method="POST" action="/logout">
                     @csrf
@@ -119,20 +118,22 @@
         {{$slot}}
     </main>
 
-    <footer
-        class="fixed bottom-0 left-0 w-full flex items-center justify-between font-bold bg-laravel text-white h-24 opacity-90 px-4 md:px-16 lg:px-24 xl:px-32">
-        <p class="ml-2">Copyright &copy; 2022, All Rights reserved</p>
 
-        <!-- Mobile Post Job Button -->
-        @auth
-            <a href="/listings/create" class="bg-black text-white py-2 px-5 rounded-full">Post Job</a>
-        @else
-            <a href="/register" class="bg-black text-white py-2 px-5 rounded-full">Sign up</a>
-        @endauth
-    </footer>
 
     <x-flash-message />
+    <div class="relative pt-64">
+        <footer
+            class="bottom-0 absolute  left-0 w-full flex items-center justify-between font-bold bg-laravel text-white h-24 opacity-100 px-4 md:px-16 lg:px-24 xl:px-32">
+            <p class="ml-2">Copyright &copy; 2024, All Rights reserved</p>
 
+            <!-- Mobile Post Job Button -->
+            @auth
+                <a href="/listings/create" class="bg-white text-black py-2 px-5 rounded-full">Post Job</a>
+            @else
+                <a href="/register" class="bg-white text-black py-2 px-5 rounded-full">Sign up</a>
+            @endauth
+        </footer>
+    </div>
     <script>
         const menu = document.getElementById('menu');
         const closeMenu = document.getElementById('close-menu');
