@@ -1,0 +1,12 @@
+# Essential minimal version
+/node_modules
+/vendor
+/.env
+/.git
+.gitignore
+*.md
+.DS_Store
+/storage/logs/*
+phpunit.xml
+.dockerignore
+render_build.sh
